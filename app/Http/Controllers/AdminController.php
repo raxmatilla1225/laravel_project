@@ -1,5 +1,5 @@
 <?php
-//nma gap tinchmisan?
+
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
