@@ -305,6 +305,7 @@
                                 <div class="col-lg-3 col-md-4 col-sm-6">
                                     <div class="product-box">
                                         <div class="imagebox">
+                                            <div>salom</div>
 
                                             <div class="image">
                                                 <a href="#" title="">
