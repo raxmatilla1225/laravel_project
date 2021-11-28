@@ -296,6 +296,7 @@
                             </div><!-- /.sort-product style1 -->
                             <div class="row">
 
+                                <div class="col-md-4">salom</div>
                                 @php
                                     \App\Models\Category::all()
                                 @endphp
