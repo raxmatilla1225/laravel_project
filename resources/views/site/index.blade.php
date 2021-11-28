@@ -26,7 +26,7 @@
     <!-- Reponsive -->
     <link rel="stylesheet" href="{{asset("css/responsive.css")}}">
 
-{{--    <link rel="shortcut icon" href="{{asset("favicon/favicon.png")}}">--}}
+    <link rel="shortcut icon" href="{{asset("favicon/favicon.png")}}">
 
 </head>
 <body class="header_sticky">
@@ -520,9 +520,9 @@
                             <div class="btn-mega"><span></span>ALL CATEGORIES</div>
                             <ul class="menu">
                                 <li>
-                                    <a href="#" title="">
+                                    <a href="{{route('product.table')}}" title="">
 												<span class="menu-img">
-													<img src="images/icons/menu/04.png" alt="">
+													<img src="images/icons/menu/01.png" alt="">
 												</span>
                                         <span class="menu-title">
 													Software

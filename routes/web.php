@@ -18,14 +18,89 @@ use \App\Http\Controllers\ProductController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('shop.creativelayers.themes.techno-html.index-v7');
+//Route::get('/layout', function () {
+//    return view('site.table.first_category');
 //});
 
 Route::get('/', function () {
     return view('site.index');
 });
 
+Route::view('/products','site.table.product')->name('product.table');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ADMINKA
 Route::get('/administration', function () {
     return view('admin.index');
 });
