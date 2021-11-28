@@ -295,9 +295,6 @@
                                 <div class="clearfix"></div>
                             </div><!-- /.sort-product style1 -->
                             <div class="row">
-
-                                <div class="col-md-4">salom</div>
-                                <div class="col-md-8">salom </div>
                                 @php
                                     \App\Models\Category::all()
                                 @endphp
