@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view("admin.table.category");
     }
 
     /**
@@ -24,7 +24,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.form.add_category');
     }
 
     /**
@@ -35,7 +35,24 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required|string|min:3',
+            'image'=>'required|image',
+        ]);
+
+        $category = new Category();
+        $category->name = $request->name;
+        if ($image = $request->file('image')) {
+            $imageDestinationPath = 'uploads/category_images/';
+            $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($imageDestinationPath, $postImage);
+            $category->image = $postImage;
+        }
+
+        $category->save();
+
+        return redirect()->route('table.category');
+
     }
 
     /**
@@ -55,9 +72,15 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+        $category = Category::find($id);
+
+        $id = $category['id'];
+        $name = $category['name'];
+        $image = $category['image'];
+
+        return view('admin.form.edit_category',['id'=>$id,'name'=>$name,'image'=>$image]);
     }
 
     /**
@@ -69,7 +92,27 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+
+
+        $request->validate([
+            'name'=>'required|string|min:3',
+            'image'=>'required|image',
+        ]);
+
+        $name = $request->input('name');
+        $id = $request->input('id');
+
+        if ($image = $request->file('image')) {
+            $imageDestinationPath = 'uploads/category_images/';
+            $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($imageDestinationPath, $postImage);
+            $image = "$postImage";
+        }
+
+        Category::where('id',$id)->update(['name' => $name, 'image' => $image]);
+
+        return redirect()->route('table.category');
+
     }
 
     /**

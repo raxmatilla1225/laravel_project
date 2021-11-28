@@ -106,6 +106,19 @@ Route::get('/administration', function () {
 });
 
 
+
+//Category Routs
+
+Route::get('/category',[CategoryController::class, 'index'])->name('table.category');
+
+Route::get('/category_add',[CategoryController::class, 'create'])->name('add.category');
+
+Route::post('/categories',[CategoryController::class, 'store'])->name('store.category');
+
+Route::get('/category_edit/{id}',[CategoryController::class, 'edit']);
+
+Route::put('/categoriess',[CategoryController::class, 'update'])->name('update.category');
+
 //Admin Routs
 
 Route::get('/admin',[AdminController::class, 'index'])->name('table.admin');

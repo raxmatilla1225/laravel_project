@@ -6,18 +6,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <form action="post" action="" enctype="multipart/form-data">
+                <form method="post"   action="{{route('store.category')}}"  enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group">
-                        <label for="name">name</label>
-                        <input type="text" class="form-control" id="name" name="name">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
                     </div>
 
-                    <button type="submit">Save</button>
+                    <div class="custom-file">
+                        <label class="custom-file-label" for="img">Image</label>
+                        <input type="file" class="custom-file-input" id="img" name="image">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary my-3">Submit</button>
                 </form>
             </div>
         </div>
     </div>
+
 
 
 @endsection

@@ -62,7 +62,8 @@ class AdminController extends Controller
 
         $admin->save();
 
-        return view("admin.table.admin");
+        return redirect()->route('table.admin');
+
 
 
 
@@ -128,7 +129,8 @@ class AdminController extends Controller
 
 //        $admin->update($input);
 
-        return view("admin.table.admin");
+        return redirect()->route('table.admin');
+
     }
 
     /**
