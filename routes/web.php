@@ -18,11 +18,15 @@ use \App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/l;kjhgfd', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('shop.creativelayers.themes.techno-html.index-v7');
+//});
 
 Route::get('/', function () {
+    return view('site.index');
+});
+
+Route::get('/administration', function () {
     return view('admin.index');
 });
 

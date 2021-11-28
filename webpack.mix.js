@@ -24,5 +24,39 @@ mix.scripts([
     "resources/vendor/js/sb-admin-2.min.js",
 ],"public/js/app.js");
 
-mix.styles("resources/vendor/css/sb-admin-2.min.css","public/css/app.css");
+// mix.scripts([
+//     // -----------------site----------------------
+//     "resources/vendor/js/site_js/bootstrap.min.js",
+//     "resources/vendor/js/site_js/easing.js",
+//     "resources/vendor/js/site_js/gmap3.min.js",
+//     "resources/vendor/js/site_js/jquery.circlechart.js",
+//     "resources/vendor/js/site_js/jquery.countdown.js",
+//     "resources/vendor/js/site_js/jquery.flexslider-min.js",
+//     "resources/vendor/js/site_js/jquery.mCustomScrollbar.js",
+//     "resources/vendor/js/site_js/jquery.min.js",
+//     "resources/vendor/js/site_js/jquery.zoom.min.js",
+//     "resources/vendor/js/site_js/jquery-ui.js",
+//     "resources/vendor/js/site_js/main.js",
+//     "resources/vendor/js/site_js/owl.carousel.js",
+//     "resources/vendor/js/site_js/smoothscroll.js",
+//     "resources/vendor/js/site_js/tether.min.js",
+//     "resources/vendor/js/site_js/waves.min.js",
+//     "resources/vendor/js/site_js/waypoints.min.js",
+// ],"public/js/site_app.js");
+
+mix.styles([
+    "resources/vendor/css/sb-admin-2.min.css",
+],"public/css/app.css")
+
+// mix.styles([
+//     "resources/vendor/css/bootstrap.min.css",
+//     "resources/vendor/css/responsive.css",
+//     "resources/vendor/css/style.css",
+// ],"public/css/site_app.css");
+
+
+// mix.styles("resources/vendor/css/sb-admin-2.min.css","public/css/app.css");
 mix.styles("resources/vendor/fontawesome-free/css/all.css","public/font-awesome/font.css");
+
+
+
