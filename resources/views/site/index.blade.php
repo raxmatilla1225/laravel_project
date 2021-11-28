@@ -519,16 +519,18 @@
                         <div id="mega-menu" class="style1">
                             <div class="btn-mega"><span></span>ALL CATEGORIES</div>
                             <ul class="menu">
+                               @foreach(\App\Models\Category::all() as $item)
                                 <li>
                                     <a href="{{route('product.table')}}" title="">
 												<span class="menu-img">
-													<img src="images/icons/menu/01.png" alt="">
+													<img src="{{item.image}}" alt="">
 												</span>
                                         <span class="menu-title">
 													Software
 												</span>
                                     </a>
                                 </li>
+                                @endforeach
                             </ul><!-- /.menu -->
                         </div>
                     </div><!-- /.col-md-3 col-2 -->

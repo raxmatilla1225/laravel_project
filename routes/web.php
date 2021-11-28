@@ -27,6 +27,21 @@ Route::get('/', function () {
 });
 
 Route::view('/products','site.table.product')->name('product.table');
+Route::get("/product/{id}",function ($id){
+
+    $products = \Illuminate\Support\Facades\DB::select("select p.id,p.name,p.price,p.image from products p inner join categories c on p.c_id = c.id");
+    $data =[];
+    foreach ($products as $product){
+        $data['id'] = $product->id;
+        $data['name'] = $product->name;
+        $data['price'] = $product->price;
+        $data['image'] = $product->image;
+    }
+
+    return view("site.table.product",['data'=>$data]);
+
+
+});
 
 
 
@@ -156,5 +171,6 @@ Route::post('/custom_register',[CustomController::class, 'customRegister'])->nam
 Route::post('/custom_login',[CustomController::class, 'customLogin'])->name('login.custom');
 
 Route::get('/logout',[CustomController::class, 'logOut'])->name('user.logout');
+
 
 
