@@ -523,10 +523,10 @@
                                 <li>
                                     <a href="{{url('product/'.$item->id)}}" title="">
 												<span class="menu-img">
-													<img src="{{$item->image}}" alt="">
+													<img width="100" src="{{$item->image}}" alt="">
 												</span>
                                         <span class="menu-title">
-													Software
+													{{$item->name}}
 												</span>
                                     </a>
                                 </li>
