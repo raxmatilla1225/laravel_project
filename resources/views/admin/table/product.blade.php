@@ -15,8 +15,6 @@
                         <th>id</th>
                         <th>name</th>
                         <th>price</th>
-                        <th>description</th>
-                        <th>c_id</th>
                         <th>image</th>
                         <th>action</th>
                     </tr>
@@ -28,9 +26,7 @@
                             <td>{{$item->id}}</td>
                             <td>{{$item->name}}  </td>
                             <td>{{$item->price}}  </td>
-                            <td>{{$item->desc}}</td>
-                            <td>{{$item->c_id}}</td>
-                            <td><img class="rounded-circle" src="{{asset("/uploads/product_images/".$item->image) }}" width="100px"></td>
+                            <td><img  src="{{asset("/uploads/product_images/".$item->image) }}" width="65px"></td>
                             <td>
                                 <a href="{{url('/product_edit/'.$item->id)}}" class="btn btn-success">Edit</a>
                                 <a href="" class="btn btn-danger" >delete </a>

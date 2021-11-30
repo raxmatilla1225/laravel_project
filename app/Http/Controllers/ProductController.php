@@ -92,9 +92,10 @@ class ProductController extends Controller
         $name = $product['name'];
         $price = $product['price'];
         $desc = $product['desc'];
+        $c_id = $product['c_id'];
         $image = $product['image'];
 
-        return view('admin.form.edit_product',['id'=>$id,'name'=>$name,'price'=>$price,'desc'=>$desc,'image'=>$image]);
+        return view('admin.form.edit_product',['id'=>$id,'name'=>$name,'price'=>$price,'desc'=>$desc,'c_id'=>$c_id,'image'=>$image]);
     }
 
     /**
@@ -125,6 +126,8 @@ class ProductController extends Controller
             $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($imageDestinationPath, $postImage);
             $image = "$postImage";
+        }else{
+            $image = "image.png";
         }
 
         Product::where('id',$id)->update(['name' => $name,'price' => $price,'desc' => $desc,'c_id' => $c_id,'image' => $image,]);

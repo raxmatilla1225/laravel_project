@@ -4,9 +4,9 @@
 @section("content")
 
     <div class="container">
-        <div class="row">
+            <form class="row w-100" method="post" action="{{route('update.product')}}" enctype="multipart/form-data">
+
             <div class="col-md-6">
-                <form method="post" action="{{route('update.product')}}" enctype="multipart/form-data">
                     @csrf
                     @method('put')
 
@@ -17,16 +17,25 @@
                         <input value="{{$name}}" type="text" class="form-control" id="exampleInputName"
                                aria-describedby="emailHelp" name="name">
                     </div>
+                @if($errors->has('name'))
+                    <span class="text-danger">{{$errors->first('name')}}</span>
+                @endif
 
                     <div class="form-group">
                         <label for="price">Price</label>
                         <input value="{{$price}}" type="number" class="form-control" id="price" name="price">
                     </div>
+                @if($errors->has('price'))
+                    <span class="text-danger">{{$errors->first('price')}}</span>
+                @endif
 
                     <div class="form-group">
                         <label for="desc">Description</label>
                         <textarea class="form-control" name="desc" id="desc" rows="5">{{$desc}}</textarea>
                     </div>
+                @if($errors->has('desc'))
+                    <span class="text-danger">{{$errors->first('desc')}}</span>
+                @endif
 
                     <div class="form-group">
                         <select name="c_id" id="" class="form-control">
@@ -36,24 +45,34 @@
                             @endforeach
                         </select>
                     </div>
+                @if($errors->has('c_id'))
+                    <span class="text-danger">{{$errors->first('c_id')}}</span>
+                @endif
 
-                    <button type="submit" class="btn btn-primary my-3">Submit</button>
-                </form>
             </div>
 
             <div class="col-md-6">
-                <div class="form-group">
-                    <img width="400" src="{{asset("/uploads/product_images/".$image) }}" alt="">
-                </div>
 
+                <h5>Image</h5>
                 <div class="custom-file">
-                    <label class="custom-file-label" for="img">Image</label>
-                    <input  type="file" value="" class="custom-file-input" id="img" name="image">
+                    <label class="custom-file-label" for="image">Choose picture</label>
+                    <input type="file" class="custom-file-input" name="image" placeholder="Choose image" id="image">
                 </div>
+                @if($errors->has('image'))
+                    <span class="text-danger">{{$errors->first('image')}}</span>
+                @endif
+                <div class="form-group my-5">
+                    <img id="preview-image-before-upload" src="{{asset("/uploads/product_images/".$image) }}"
+                         alt="preview image" style="max-height: 250px;">
+                </div>
+
             </div>
+                <button type="submit" class="btn btn-primary my-3">Submit</button>
+
+            </form>
 
 
-        </div>
+
     </div>
 
 
