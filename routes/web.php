@@ -191,8 +191,6 @@ Route::put('/categoriess',[CategoryController::class, 'update'])->name('update.c
 
 
 
-
-
 //-----------
 //Product Routs
 

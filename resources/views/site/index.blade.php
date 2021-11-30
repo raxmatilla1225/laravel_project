@@ -520,15 +520,14 @@
                             <div class="btn-mega"><span></span>ALL CATEGORIES</div>
                             <ul class="menu">
                                @foreach(\App\Models\Category::all() as $item)
-{{--                                   @if($item->id = )--}}
-{{--                                       --}}
-{{--                                   @endif--}}
                                 <li>
-                                    <a href="{{url("product/$item->id")}}" title="">
+                                    <a href="{{url('product/'.$item->id)}}" title="">
 												<span class="menu-img">
-													<img src="{{asset("uploads/category_images/$item->image")}}" alt="">
+													<img src="{{$item->image}}" alt="">
 												</span>
-                                        <span class="menu-title">{{$item->name}}</span>
+                                        <span class="menu-title">
+													Software
+												</span>
                                     </a>
                                 </li>
                                 @endforeach

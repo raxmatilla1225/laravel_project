@@ -16,7 +16,6 @@ class CategoryController extends Controller
     {
         return view("admin.table.category");
     }
-
     /**
      * Show the form for creating a new resource.
      *
