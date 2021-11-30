@@ -29,6 +29,7 @@
                 <img width="400" src="{{asset("/uploads/admin_images/".$image) }}" alt="">
 
             </div>
+        </div>
     </div>
 
 

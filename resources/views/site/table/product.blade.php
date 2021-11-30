@@ -2,6 +2,13 @@
 
 
 @section('content')
+
+    @php
+
+        use Illuminate\Support\Facades\DB;
+        $products = DB::select("select  p.id, p.name, p.price, p.image, c.name as cat_n from products p inner join categories c on p.c_id = c.id where c.id = $id");
+
+    @endphp
     <section class="flat-breadcrumb">
         <div class="container">
             <div class="row">
@@ -11,12 +18,17 @@
                             <a href="#" title="">Home</a>
                             <span><img src="images/icons/arrow-right.png" alt=""></span>
                         </li>
-                        <li class="trail-item">
-                            <a href="#" title="">Shop</a>
-                            <span><img src="images/icons/arrow-right.png" alt=""></span>
-                        </li>
+                        @php
+
+                            $products = DB::select("select c.name as cat_n from products p inner join categories c on p.c_id = c.id where c.id = $id");
+                            $data = [];
+                            foreach ($products as $product)
+                            $data['cat_n'] = $product->cat_n;
+
+                        @endphp
                         <li class="trail-end">
-                            <a href="#" title="">Smartphones</a>
+                            <a href="#" title="">{{$data['cat_n']}}</a>
+{{--                            <a href="#" title="">Smartphones</a>--}}
                         </li>
                     </ul><!-- /.breacrumbs -->
                 </div><!-- /.col-md-12 -->
@@ -296,15 +308,14 @@
                             </div><!-- /.sort-product style1 -->
                             <div class="row">
                                 @php
-                                    \App\Models\Category::all()
-                                @endphp
 
-                                @foreach(\App\Models\Product::all() as $product)
+                                    $products = DB::select("select  p.id, p.name, p.price, p.image, c.name as cat_n from products p inner join categories c on p.c_id = c.id where c.id = $id");
+
+                                @endphp
+                                @foreach($products as $product)
                                 <div class="col-lg-3 col-md-4 col-sm-6">
                                     <div class="product-box">
                                         <div class="imagebox">
-                                            <div>salom</div>
-
                                             <div class="image">
                                                 <a href="#" title="">
                                                     <img src="{{asset("uploads/product_images/".$product->image)}}" alt="">
@@ -314,7 +325,8 @@
                                             <div class="box-content">
                                                 <div class="cat-name">
 {{--                                                    <a href="#" title="">Mobile phone</a>--}}{{--product_category--}}
-                                                    <a href="#" title="">Smartphones{{$product->category}}</a>{{--product_category--}}
+                                                    <a href="#" title="">{{$product->cat_n}}</a>{{--product_category--}}
+{{--                                                    <a href="#" title="">Smartphones</a>--}}{{--product_category--}}
                                                 </div>
                                                 <div class="product-name">
                                                     <a href="#" title="">{{$product->name}}</a>{{--product_name--}}

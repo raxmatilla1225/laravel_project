@@ -66,7 +66,8 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Admin setting</h6>
-                    <a class="collapse-item" href="{{route('table.admin')}}">Admin</a>
+                    <a class="collapse-item" href="{{route('table.admin')}}">Admins</a>
+{{--                    <a class="collapse-item" href="{{route('table.client')}}">Clients</a>--}}
                     <a class="collapse-item" href="">Users</a>
                 </div>
             </div>

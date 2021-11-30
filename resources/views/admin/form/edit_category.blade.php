@@ -26,7 +26,7 @@
                 </form>
             </div>
             <div class="col-md-6">
-                <img width="400" src="{{asset("/uploads/category_images/".$image) }}" alt="">
+                <img width="100" src="{{asset("/uploads/category_images/".$image) }}" alt="">
 
             </div>
         </div>

@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
+    public function show_table($id){
+        return view('site.table.product', ["id" => $id]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -80,9 +84,17 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
-        //
+        $product = Product::find($id);
+
+        $id = $product['id'];
+        $name = $product['name'];
+        $price = $product['price'];
+        $desc = $product['desc'];
+        $image = $product['image'];
+
+        return view('admin.form.edit_product',['id'=>$id,'name'=>$name,'price'=>$price,'desc'=>$desc,'image'=>$image]);
     }
 
     /**
@@ -94,7 +106,30 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $request->validate([
+            'name'=>'required|string|min:3',
+            'price'=>'required',
+            'desc'=>'required',
+            'c_id'=>'required',
+            'image'=>'required|image',
+        ]);
+
+        $name = $request->input('name');
+        $price = $request->input('price');
+        $desc = $request->input('desc');
+        $c_id = $request->input('c_id');
+        $id = $request->input('id');
+
+        if ($image = $request->file('image')) {
+            $imageDestinationPath = 'uploads/product_images/';
+            $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($imageDestinationPath, $postImage);
+            $image = "$postImage";
+        }
+
+        Product::where('id',$id)->update(['name' => $name,'price' => $price,'desc' => $desc,'c_id' => $c_id,'image' => $image,]);
+
+        return redirect()->route('table.product');
     }
 
     /**

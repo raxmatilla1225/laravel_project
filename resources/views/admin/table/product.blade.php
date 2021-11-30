@@ -32,7 +32,7 @@
                             <td>{{$item->c_id}}</td>
                             <td><img class="rounded-circle" src="{{asset("/uploads/product_images/".$item->image) }}" width="100px"></td>
                             <td>
-                                <a href="" class="btn btn-success" >edit </a>
+                                <a href="{{url('/product_edit/'.$item->id)}}" class="btn btn-success">Edit</a>
                                 <a href="" class="btn btn-danger" >delete </a>
                                 <a href="" class="btn btn-info" >show </a>
                             </td>

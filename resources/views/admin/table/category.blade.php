@@ -35,7 +35,7 @@
                             <td>{{$item->id}}</td>
                             <td>{{$item->name}}  </td>
                             {{--                            <td><img width="100" src="{{asset("storage/".$item->image)}}" alt=""></td>--}}
-                            <td><img src="{{asset("/uploads/category_images/".$item->image) }}" width="30px"></td>
+                            <td><img src="{{asset("/uploads/category_images/".$item->image) }}" ></td>
                             <td>
                                 <a href="{{url('/category_edit/'.$item->id)}}" class="btn btn-success">Edit</a>
                                 <a href="" class="btn btn-danger">delete </a>
