@@ -43,7 +43,7 @@
                     <div class="main-shop">
                         <div class="wrap-imagebox">
                             <div class="flat-row-title style4">
-                                <h3>Mobile & Tablet</h3>
+                                <h3>{{$data['cat_n']}}</h3>
                                 <span>
 										Showing 1–15 of 20 results
 									</span>

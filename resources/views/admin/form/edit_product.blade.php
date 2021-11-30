@@ -56,7 +56,7 @@
                 <h5>Image</h5>
                 <div class="custom-file">
                     <label class="custom-file-label" for="image">Choose picture</label>
-                    <input type="file" class="custom-file-input" name="image" placeholder="Choose image" id="image">
+                    <input type="file" value="{{$image}}" class="custom-file-input" name="image" placeholder="Choose image" id="image">
                 </div>
                 @if($errors->has('image'))
                     <span class="text-danger">{{$errors->first('image')}}</span>
