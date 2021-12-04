@@ -66,19 +66,13 @@
                                 <a href="#" title="">My Account<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="unstyled">
                                     <li>
-                                        <a href="#" title="">Login</a>
+                                        <a href="{{route('login')}}" title="">Login</a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" title="">Wishlist</a>
+                                        <a href="{{route('register-user')}}" title="">Register</a>
                                     </li>
                                     <li>
-                                        <a href="shop-cart.html" title="">My Cart</a>
-                                    </li>
-                                    <li>
-                                        <a href="my-account.html" title="">My Account</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-checkout.html" title="">Checkout</a>
+                                        <a href="{{route('user.logout')}}" title="">Log out</a>
                                     </li>
                                 </ul>
                             </li>
@@ -523,7 +517,7 @@
                                 <li>
                                     <a href="{{url('product/'.$item->id)}}" title="">
 												<span class="menu-img">
-													<img width="100" src="{{$item->image}}" alt="">
+													<img src="{{asset("/uploads/category_images/$item->image")}}" alt="">
 												</span>
                                         <span class="menu-title">
 													{{$item->name}}

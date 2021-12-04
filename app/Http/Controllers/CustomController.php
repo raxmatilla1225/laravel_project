@@ -25,10 +25,13 @@ class CustomController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')->withSuccess('Signed in');
+            return redirect()->route('show.product');
+
+
         }
 
-        return redirect("login")->withSuccess('Login details are not valid');
+        return redirect('register')->withSuccess('error');
+
 
     }
 
@@ -46,7 +49,7 @@ class CustomController extends Controller
         $data = $request->all();
         $check = $this->create($data);
 
-        return redirect("dashboard")->withSuccess('You have signed-in');
+        return redirect()->route('show.product');
 
     }
 
@@ -73,6 +76,6 @@ class CustomController extends Controller
         Session::flush();
         Auth::logout();
 
-        return Redirect('login');
+        return redirect()->route('techno.store');
     }
 }

@@ -1084,6 +1084,50 @@
 <script type="text/javascript" src="{{asset("js/jquery.countdown.js")}}"></script>
 
 <script type="text/javascript" src="{{asset("js/main.js")}}"></script>
+<script>
+
+    let cart = {
+        'prod_1' : 1,
+    };
+
+    document.onclick = event => {
+        if(event.target.classList.contains('plus')){
+            plusFunction(event.target.dataset.id);
+        }
+        if(event.target.classList.contains('minus')){
+            minusFunction(event.target.dataset.id);
+        }
+    }
+
+    //увеличение кол товара
+    const plusFunction = id => {
+        cart[id]++;
+        renderCart();
+    }
+
+    //уменьшение кол товара
+    const minusFunction = id => {
+        if(cart[id] - 1 == 0){
+            deleteFunction(id);
+            return true;
+        }
+        cart[id]--;
+        renderCart();
+    }
+
+    //удаление кол товара
+    const deleteFunction = id => {
+        delete cart[id];
+        renderCart();
+    }
+
+    const renderCart = () => {
+        console.log(cart);
+    }
+
+    renderCart();
+
+</script>
 {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>--}}
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>--}}
 {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>--}}

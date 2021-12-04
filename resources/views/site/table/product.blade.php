@@ -317,7 +317,7 @@
                                     <div class="product-box">
                                         <div class="imagebox">
                                             <div class="image">
-                                                <a href="#" title="">
+                                                <a href="{{url('product_info/'.$product->id)}}" title="">
                                                     <img src="{{asset("uploads/product_images/".$product->image)}}" alt="">
                                                 </a>
                                             </div>
@@ -333,7 +333,7 @@
                                                 </div>
                                                 <div class="price">
                                                     <span class="sale">{{$product->price}}$</span>{{--product_price--}}
-                                                    <span class="regular">{{$product->price+($product->price)*.3}}$</span>{{--product_price--}}
+                                                    <span class="regular">{{$product->price+($product->price)*.2}}$</span>{{--product_price--}}
                                                 </div>
                                             </div><!-- /.box-content -->
                                             <div class="box-bottom">

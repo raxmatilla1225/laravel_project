@@ -25,9 +25,11 @@ use \App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('site.index');
-});
+})->name('techno.store');
 
 Route::get('product/{id}',[ProductController::class, 'show_table'])->name('product.table');
+
+Route::get('/product_info/{id}',[ProductController::class,'show'])->name('show.product');
 
 
 
