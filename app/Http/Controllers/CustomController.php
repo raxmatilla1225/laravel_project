@@ -25,9 +25,7 @@ class CustomController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->route('show.product');
-
-
+            return redirect()->route('techno.store');
         }
 
         return redirect('register')->withSuccess('error');
@@ -49,7 +47,7 @@ class CustomController extends Controller
         $data = $request->all();
         $check = $this->create($data);
 
-        return redirect()->route('show.product');
+        return redirect()->route('login');
 
     }
 

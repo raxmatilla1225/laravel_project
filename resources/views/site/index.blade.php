@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{asset("css/bootstrap.min.css")}}">
 
     <!-- Theme style -->
-    <link rel="stylesheet"  href="{{asset("css/style.css")}}">
+    <link rel="stylesheet" href="{{asset("css/style.css")}}">
 
     <!-- Reponsive -->
     <link rel="stylesheet" href="{{asset("css/responsive.css")}}">
@@ -126,369 +126,24 @@
                                 <ul class="menu">
                                     <li class="column-1">
                                         <a href="#" title="">Home</a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="index.html" title=""><i class="fa fa-angle-right"
-                                                                                 aria-hidden="true"></i>Home Layout
-                                                    01</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-v2.html" title=""><i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i>Home Layout
-                                                    02</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-v3.html" title=""><i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i>Home Layout
-                                                    03</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-v4.html" title=""><i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i>Home Layout
-                                                    04</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-v5.html" title=""><i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i>Home Layout
-                                                    05</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-v6.html" title=""><i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i>Home Layout
-                                                    06</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-v7.html" title=""><i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i>Home Layout
-                                                    07</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-v8.html" title=""><i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i>Home Layout
-                                                    08</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-v9.html" title=""><i class="fa fa-angle-right"
-                                                                                    aria-hidden="true"></i>Home Layout
-                                                    09</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-v10.html" title=""><i class="fa fa-angle-right"
-                                                                                     aria-hidden="true"></i>Home Layout
-                                                    10</a>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li class="column-1">
-                                        <a href="shop.html" title="">Shop</a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="shop.html" title=""><i class="fa fa-angle-right"
-                                                                                aria-hidden="true"></i>Shop left sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-v2.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Shop right
-                                                    sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-v3.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Shop list view</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-v4.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Shop full
-                                                    width</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-v5.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Shop 03 column</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-cart.html" title=""><i class="fa fa-angle-right"
-                                                                                     aria-hidden="true"></i>Shop
-                                                    cart</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop-checkout.html" title=""><i class="fa fa-angle-right"
-                                                                                         aria-hidden="true"></i>Shop
-                                                    checkout</a>
-                                            </li>
-                                        </ul>
+                                        <a href="#" title="">Shop</a>
                                     </li>
                                     <li class="column-1">
                                         <a href="#" title="">Features</a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="#" title=""><i class="fa fa-angle-right"
-                                                                        aria-hidden="true"></i>Home Theater Systems</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title=""><i class="fa fa-angle-right"
-                                                                        aria-hidden="true"></i>Receivers &
-                                                    Amplifiers</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title=""><i class="fa fa-angle-right"
-                                                                        aria-hidden="true"></i>Speakers</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title=""><i class="fa fa-angle-right"
-                                                                        aria-hidden="true"></i>CD Players &
-                                                    Turntables</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title=""><i class="fa fa-angle-right"
-                                                                        aria-hidden="true"></i>High-Resolution Audio</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title=""><i class="fa fa-angle-right"
-                                                                        aria-hidden="true"></i>4K Ultra HD TVs</a>
-                                            </li>
-                                        </ul><!-- /.submenu -->
-                                    </li><!-- /.column-1 -->
+                                    </li>
                                     <li>
                                         <a href="#" title="">Electronic</a>
-                                        <div class="submenu">
-                                            <div class="row">
-                                                <div class="col-md-3">
-                                                    <h3 class="cat-title">Accessories</h3>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" title="">Electronics</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Furniture</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Accessories</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Divided</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Everyday Fashion</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Modern Classic</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Party</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="show">
-                                                        <a href="#" title="">Shop All</a>
-                                                    </div>
-                                                </div><!-- /.col-md-3 -->
-                                                <div class="col-md-3">
-                                                    <h3 class="cat-title">Laptop And Computer</h3>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" title="">Networking & Internet Devices</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Laptops, Desktops & Monitors</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Hard Drives & Memory Cards</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Printers & Ink</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Networking & Internet Devices</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Computer Accessories</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Software</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="show">
-                                                        <a href="#" title="">Shop All</a>
-                                                    </div>
-                                                </div><!-- /.col-md-3 -->
-                                                <div class="col-md-4">
-                                                    <h3 class="cat-title">Audio & Video</h3>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" title="">Headphones & Speakers</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Home Entertainment Systems</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">MP3 & Media Players</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="show">
-                                                        <a href="#" title="">Shop All</a>
-                                                    </div>
-                                                </div><!-- /.col-md-4 -->
-                                                <div class="col-md-2">
-                                                    <h3 class="cat-title">Home Audio</h3>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" title="">Home Theater Systems</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Receivers & Amplifiers</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">Speakers</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">CD Players & Turntables</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">High-Resolution Audio</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" title="">4K Ultra HD TVs</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="show">
-                                                        <a href="#" title="">Shop All</a>
-                                                    </div>
-                                                </div><!-- /.col-md-2 -->
-                                            </div><!-- /.row -->
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="banner-box">
-                                                        <div class="inner-box">
-                                                            <a href="#" title="">
-                                                                <img src="{{asset("images/banner_boxes/submenu-01.png")}}" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- /.col-md-6 -->
-                                                <div class="col-md-6">
-                                                    <div class="banner-box">
-                                                        <div class="inner-box">
-                                                            <a href="#" title="">
-                                                                <img src="{{asset("images/banner_boxes/submenu-02.png")}}" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- /.col-md-6 -->
-                                            </div><!-- /.row -->
-                                        </div><!-- /.submenu -->
                                     </li>
                                     <li class="column-1">
                                         <a href="#" title="">Pages</a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="about.html" title=""><i class="fa fa-angle-right"
-                                                                                 aria-hidden="true"></i>About</a>
-                                            </li>
-                                            <li>
-                                                <a href="404.html" title=""><i class="fa fa-angle-right"
-                                                                               aria-hidden="true"></i>404 Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="brands.html" title=""><i class="fa fa-angle-right"
-                                                                                  aria-hidden="true"></i>Brands Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="categories.html" title=""><i class="fa fa-angle-right"
-                                                                                      aria-hidden="true"></i>Categories
-                                                    01</a>
-                                            </li>
-                                            <li>
-                                                <a href="categories-v2.html" title=""><i class="fa fa-angle-right"
-                                                                                         aria-hidden="true"></i>Categories
-                                                    02</a>
-                                            </li>
-                                            <li>
-                                                <a href="element.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Element</a>
-                                            </li>
-                                            <li>
-                                                <a href="faq.html" title=""><i class="fa fa-angle-right"
-                                                                               aria-hidden="true"></i>FAQ</a>
-                                            </li>
-                                            <li>
-                                                <a href="order-tracking.html" title=""><i class="fa fa-angle-right"
-                                                                                          aria-hidden="true"></i>Order
-                                                    Tracking</a>
-                                            </li>
-                                            <li>
-                                                <a href="term-condition.html" title=""><i class="fa fa-angle-right"
-                                                                                          aria-hidden="true"></i>Terms &
-                                                    Conditions</a>
-                                            </li>
-                                            <li>
-                                                <a href="single-product.html" title=""><i class="fa fa-angle-right"
-                                                                                          aria-hidden="true"></i>Single
-                                                    Product 01</a>
-                                            </li>
-                                            <li>
-                                                <a href="single-product-v2.html" title=""><i class="fa fa-angle-right"
-                                                                                             aria-hidden="true"></i>Single
-                                                    Product 02</a>
-                                            </li>
-                                            <li>
-                                                <a href="single-product-v3.html" title=""><i class="fa fa-angle-right"
-                                                                                             aria-hidden="true"></i>Single
-                                                    Product 03</a>
-                                            </li>
-                                            <li>
-                                                <a href="single-product-v4.html" title=""><i class="fa fa-angle-right"
-                                                                                             aria-hidden="true"></i>Single
-                                                    Product 04</a>
-                                            </li>
-                                            <li>
-                                                <a href="single-product-v5.html" title=""><i class="fa fa-angle-right"
-                                                                                             aria-hidden="true"></i>Single
-                                                    Product 05</a>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li class="column-1">
-                                        <a href="blog.html" title="">Blog</a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="blog.html" title=""><i class="fa fa-angle-right"
-                                                                                aria-hidden="true"></i>Blog left sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a href="blog-v2.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Blog right
-                                                    sidebar</a>
-                                            </li>
-                                            <li>
-                                                <a href="blog-v3.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Blog list</a>
-                                            </li>
-                                            <li>
-                                                <a href="blog-v4.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Blog 02 column</a>
-                                            </li>
-                                            <li>
-                                                <a href="blog-v5.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Blog full
-                                                    width</a>
-                                            </li>
-                                            <li>
-                                                <a href="blog-single.html" title=""><i class="fa fa-angle-right"
-                                                                                       aria-hidden="true"></i>Blog
-                                                    single</a>
-                                            </li>
-                                        </ul>
+                                        <a href="#" title="">Blog</a>
                                     </li>
                                     <li class="column-1">
-                                        <a href="contact.html" title="">Contact</a>
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="contact.html" title=""><i class="fa fa-angle-right"
-                                                                                   aria-hidden="true"></i>Contact 01</a>
-                                            </li>
-                                            <li>
-                                                <a href="contact-v2.html" title=""><i class="fa fa-angle-right"
-                                                                                      aria-hidden="true"></i>Contact 02</a>
-                                            </li>
-                                        </ul>
+                                        <a href="#" title="">Contact</a>
                                     </li>
                                 </ul><!-- /.menu -->
                             </div><!-- /.mainnav -->
@@ -513,17 +168,18 @@
                         <div id="mega-menu" class="style1">
                             <div class="btn-mega"><span></span>ALL CATEGORIES</div>
                             <ul class="menu">
-                               @foreach(\App\Models\Category::all() as $item)
-                                <li>
-                                    <a href="{{url('product/'.$item->id)}}" title="">
+                                @foreach(\App\Models\Category::all() as $item)
+                                    <li>
+                                        <a href="{{url('product/'.$item->id)}}" title="">
 												<span class="menu-img">
-													<img src="{{asset("/uploads/category_images/$item->image")}}" alt="">
+													<img src="{{asset("/uploads/category_images/$item->image")}}"
+                                                         alt="">
 												</span>
-                                        <span class="menu-title">
+                                            <span class="menu-title">
 													{{$item->name}}
 												</span>
-                                    </a>
-                                </li>
+                                        </a>
+                                    </li>
                                 @endforeach
                             </ul><!-- /.menu -->
                         </div>
@@ -558,54 +214,52 @@
                                     </li>
                                 </ul><!-- /.menu-compare-wishlist -->
                             </div><!-- /.inner-box -->
+                            @php
+
+                                use \App\Models\Cart;
+
+                                    $products = Cart::all();
+
+                                $sum = Cart::sum('total');
+
+                            $count_pr = Cart::all()->count();
+
+                            @endphp
                             <div class="inner-box">
                                 <a href="#" title="">
                                     <div class="icon-cart">
                                         <img src="images/icons/add-cart.png" alt="">
-                                        <span>4</span>
+                                        <span>{{$count_pr}}</span>
                                     </div>
                                     <div class="price">
-                                        $0.00
+                                        ${{$sum}}
                                     </div>
                                 </a>
                                 <div class="dropdown-box">
                                     <ul>
-                                        <li>
-                                            <div class="img-product">
-                                                <img src="images/product/other/img-cart-1.jpg" alt="">
-                                            </div>
-                                            <div class="info-product">
-                                                <div class="name">
-                                                    Samsung - Galaxy S6 4G LTE <br/>with 32GB Memory Cell Phone
+                                        @foreach($products as $product)
+                                            <li>
+                                                <p hidden>{{$product->id}}</p>
+                                                <div class="img-product">
+                                                    <img width="20" src="{{asset('uploads/product_images/'.$product->image)}}" alt=""> {{--image--}}
                                                 </div>
-                                                <div class="price">
-                                                    <span>1 x</span>
-                                                    <span>$250.00</span>
+                                                <div class="info-product">
+                                                    <div class="name"> {{$product->name}}{{--name--}} </div>
+                                                    <div class="price">
+                                                        <span>{{$product->count}} x</span>{{--count--}}
+                                                        <span>${{$product->price}}.00</span>{{--price--}}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <span class="delete">x</span>
-                                        </li>
-                                        <li>
-                                            <div class="img-product">
-                                                <img src="images/product/other/img-cart-2.jpg" alt="">
-                                            </div>
-                                            <div class="info-product">
-                                                <div class="name">
-                                                    Sennheiser - Over-the-Ear Headphone System - Black
-                                                </div>
-                                                <div class="price">
-                                                    <span>1 x</span>
-                                                    <span>$250.00</span>
-                                                </div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <span class="delete">x</span>
-                                        </li>
+                                                <div class="clearfix"></div>
+                                                <span class="delete">
+                                                    <a class="btn btn-cart" href="{{url('delete_cart/'.$product->id)}}">x</a>
+                                                </span>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                     <div class="total">
                                         <span>Subtotal:</span>
-                                        <span class="price">$1,999.00</span>
+                                        <span class="price">${{$sum}}.00</span>
                                     </div>
                                     <div class="btn-cart">
                                         <a href="shop-cart.html" class="view-cart" title="">View Cart</a>

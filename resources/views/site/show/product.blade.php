@@ -1,28 +1,38 @@
 @extends('site.layouts.layout')
 @section('content')
 
+    @php
+        use App\Models\Product;
+        use Illuminate\Support\Facades\DB;
+
+        $products = DB::select("select * from products where id = $id");
+        $data = [];
+        foreach ($products as $product){
+        $data['id'] = $product->id;
+        $data['name'] = $product->name;
+        $data['price'] = $product->price;
+        $data['desc'] = $product->desc;
+        $data['image'] = $product->image;
+        }
+
+        $image = $data['image'];
+    @endphp
+
     <section class="flat-product-detail">
         <div class="container">
-            <div class="row">
-                @php
+            <form method="post" action="{{route('store.cart')}}" class="row" enctype="multipart/form-data">
+                @csrf
 
-                    use App\Models\Product;
-                    use Illuminate\Support\Facades\DB;
-
-                    $products = DB::select("select * from products where id = $id");
-
-                @endphp
-                @foreach($products as $product)
-                <div class="col-md-6">
-                    <div class="image pull-right-10" style="padding-left: 135px">
-                        <img src="{{asset("uploads/product_images/$product->image")}}" alt='' width="200px" height="400px"/>
-                    </div><!-- /.flexslider -->
-                </div><!-- /.col-md-6 -->
-                <div class="col-md-6">
+                    <div class="col-md-6">
+                        <div class="image pull-right-10" style="padding-left: 135px">
+                            <img src="{{asset("uploads/product_images/".$data['image'])}}" alt='' width="200px" height="400px"/>
+                        </div><!-- /.flexslider -->
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6">
 
                         <div class="product-detail">
                             <div class="header-detail">
-                                <h4 class="name">{{$product->name}}</h4>
+                                <h4 class="name">{{$data['name']}}</h4>
                                 <div class="category">
                                     Smart Watches
                                 </div>
@@ -30,31 +40,32 @@
                             <div class="content-detail">
                                 <div class="price">
                                     <div class="regular">
-                                        {{$product->price*1.2}}
+                                        {{$data['price']*1.2}}
                                     </div>
                                     <div class="sale">
-                                        {{$product->price}}
+                                        {{$data['price']}}
                                     </div>
                                 </div>
                                 <div class="info-text">
-                                    {{$product->desc}}
+                                    {{$data['desc']}}
                                 </div>
                             </div><!-- /.content-detail -->
                             <div class="footer-detail">
                                 <div class="quanlity-box">
-                                    <div class="quanlity">
-                                        <button class="btn btn-up plus" data-id="prod_1">+</button>
-                                        <input type="number" name="number" value="" min="1" max="100" placeholder="Quanlity">
-                                        <button class="btn btn-down minus" data-id="prod_1">-</button>
+                                    <div class="quanlity" id="app">
+                                        <span class="btn btn-up" @click="add"></span>
+                                        <input type="hidden" value="{{$data['id']}}" name="id">
+                                        <input value="" min="1" max="100" :value="counter" name="count" placeholder="Quanlity">
+                                        <span class="btn btn-down"  @click="minus"></span>
                                     </div>
 
-                                    <div class="price-total">
-                                        <p>852</p>
-                                    </div>
+{{--                                    <div class="price-total">--}}
+{{--                                        <input type="text" :value="counter*{{$product->price}}">--}}
+{{--                                    </div>--}}
                                 </div><!-- /.quanlity-box -->
                                 <div class="box-cart style2">
                                     <div class="btn-add-cart">
-                                        <a href="#" title=""><img src="images/icons/add-cart.png" alt="">Add to Cart</a>
+                                        <button class="btn btn-danger" type="submit">Add to Cart</button>
                                     </div>
                                     <div class="compare-wishlist">
                                         <a href="compare.html" class="compare" title=""><img
@@ -66,8 +77,8 @@
                             </div><!-- /.footer-detail -->
                         </div><!-- /.product-detail -->
                 </div><!-- /.col-md-6 -->
-                @endforeach
-            </div><!-- /.row -->
+
+            </form><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.flat-product-detail -->
 

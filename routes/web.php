@@ -7,7 +7,7 @@ use \App\Http\Controllers\AdminController;
 use \App\Http\Controllers\UserController;
 use \App\Http\Controllers\CategoryController;
 use \App\Http\Controllers\ProductController;
-
+use \App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,15 +27,32 @@ Route::get('/', function () {
     return view('site.index');
 })->name('techno.store');
 
+//-----------
+//Product Routs
+
 Route::get('product/{id}',[ProductController::class, 'show_table'])->name('product.table');
 
 Route::get('/product_info/{id}',[ProductController::class,'show'])->name('show.product');
 
+//End Product Routs
+//-----------
 
 
 
 
+//-----------
+//Product Routs
 
+Route::post('/cart',[CartController::class, 'store'])->name('store.cart');
+
+Route::get('/update_cart',[CartController::class, 'update'])->name('update.cart');
+
+//Product Routs
+//-----------
+
+
+
+Route::get('/delete_cart/{id}',[CartController::class, 'destroy']);
 
 
 

@@ -318,7 +318,7 @@
                                         <div class="imagebox">
                                             <div class="image">
                                                 <a href="{{url('product_info/'.$product->id)}}" title="">
-                                                    <img src="{{asset("uploads/product_images/".$product->image)}}" alt="">
+                                                    <img width="100" src="{{asset("uploads/product_images/".$product->image)}}" alt="">
                                                 </a>
                                             </div>
 
